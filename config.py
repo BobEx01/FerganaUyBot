@@ -1,1 +1,0 @@
-# config.py - Token va admin ID
