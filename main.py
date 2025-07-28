@@ -33,6 +33,6 @@ async def handle_text(message: types.Message):
     await message.answer("Iltimos, quyidagi tugmalardan birini tanlang yoki /start buyrug‘ini yuboring.")
 
 # 🔹 Botni ishga tushurish
-if name == '__main__':
+if __name__ == '__main__':
     print("✅ Bot ishga tushdi...")
     executor.start_polling(dp, skip_updates=True)
