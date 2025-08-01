@@ -21,6 +21,6 @@ register_ad_creation_handlers(dp)
 register_back_handlers(dp)
 register_confirmation_handlers(dp)
 
-if name == "__main__":
+if __name__ == "__main__":
     print("✅ FerganaUyBot ishga tushdi!")
     executor.start_polling(dp, skip_updates=True)
