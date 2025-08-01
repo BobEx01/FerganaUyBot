@@ -15,12 +15,12 @@ storage = MemoryStorage()
 bot = Bot(token=BOT_TOKEN, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot, storage=storage)
 
-# Barcha handlerlarni ro‘yxatdan o‘tkazamiz
+# Handlerlarni ro‘yxatdan o‘tkazish
 register_start_handlers(dp)
 register_ad_creation_handlers(dp)
 register_back_handlers(dp)
 register_confirmation_handlers(dp)
 
-if __name__ == "__main__":
+if name == "__main__":
     print("✅ FerganaUyBot ishga tushdi!")
     executor.start_polling(dp, skip_updates=True)
