@@ -1,7 +1,6 @@
 from aiogram import types
 from aiogram.dispatcher import Dispatcher
 from keyboards.menu import main_menu, post_categories, view_ads_menu
-from config import CATEGORIES
 
 # 📤 E'lon berish
 async def handle_post_ad(message: types.Message):
@@ -27,7 +26,8 @@ async def handle_channel_links(message: types.Message):
 async def handle_back(message: types.Message):
     await message.answer("Asosiy menyu:", reply_markup=main_menu())
 
-def register_menu_handlers(dp: Dispatcher):
+# ✅ ENDI SHU QISM QO‘SHILDI:
+def register_ad_creation_handlers(dp: Dispatcher):
     dp.register_message_handler(handle_post_ad, lambda msg: msg.text == "📤 E'lon berish")
     dp.register_message_handler(handle_view_ads, lambda msg: msg.text == "👀 E'lonlarni ko‘rish")
     dp.register_message_handler(handle_channel_links, lambda msg: "kanali" in msg.text)
